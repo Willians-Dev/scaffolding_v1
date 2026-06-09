@@ -1,0 +1,31 @@
+@model ScaffoldingV1.Models.Respuesta
+
+@{
+    ViewData["Title"] = "Detalles Respuesta";
+}
+
+<h1>Detalles Respuesta</h1>
+
+<div>
+    <h4>Respuesta</h4>
+    <hr />
+
+    <dl class="row">
+        <dt class="col-sm-2">EncuestaId</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.EncuestaId)</dd>
+
+        <dt class="col-sm-2">Fecha</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Fecha)</dd>
+
+        <dt class="col-sm-2">Nombre respondente</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.NombreRespondente)</dd>
+
+        <dt class="col-sm-2">Observación</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(model => model.Observacion)</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Volver</a>
+</div>

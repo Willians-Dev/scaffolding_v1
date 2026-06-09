@@ -1,0 +1,39 @@
+@model IEnumerable<ScaffoldingV1.Models.RespuestaDetalle>
+
+@{
+    ViewData["Title"] = "Detalle de Respuestas";
+}
+
+<h1>Detalle de Respuestas</h1>
+
+<p>
+    <a asp-action="Create">Crear nuevo detalle</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>RespuestaId</th>
+            <th>PreguntaId</th>
+            <th>OpcionRespuestaId</th>
+            <th>Texto respuesta</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.RespuestaId)</td>
+                <td>@Html.DisplayFor(modelItem => item.PreguntaId)</td>
+                <td>@Html.DisplayFor(modelItem => item.OpcionRespuestaId)</td>
+                <td>@Html.DisplayFor(modelItem => item.TextoRespuesta)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

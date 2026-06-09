@@ -1,0 +1,58 @@
+@model ScaffoldingV1.Models.RespuestaDetalle
+
+@{
+    ViewData["Title"] = "Editar Detalle";
+}
+
+<h1>Editar Detalle</h1>
+
+<h4>Detalle de Respuesta</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="RespuestaId" class="control-label"></label>
+                <input asp-for="RespuestaId" class="form-control" />
+                <span asp-validation-for="RespuestaId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PreguntaId" class="control-label"></label>
+                <input asp-for="PreguntaId" class="form-control" />
+                <span asp-validation-for="PreguntaId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OpcionRespuestaId" class="control-label"></label>
+                <input asp-for="OpcionRespuestaId" class="form-control" />
+                <span asp-validation-for="OpcionRespuestaId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TextoRespuesta" class="control-label"></label>
+                <input asp-for="TextoRespuesta" class="form-control" />
+                <span asp-validation-for="TextoRespuesta" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,30 @@
+﻿# Build
+bin/
+obj/
+.vs/
+
+# User files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Visual Studio
+.vscode/
+.idea/
+
+# ASP.NET / .NET
+appsettings.Development.json
+
+# Secrets
+secrets.json
+*.pfx
+*.key
+*.pem
+
+# NuGet
+*.nupkg
+packages/
